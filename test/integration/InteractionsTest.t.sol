@@ -29,7 +29,5 @@ contract InterationTest is Test {
         withdrawFundMe.withdrawFundMe(address(fundMe));
 
         assert(address(fundMe).balance == 0);
-
-
     }
 }
