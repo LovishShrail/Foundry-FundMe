@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --accent-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --dark-color: #34495e;
+    --light-color: #ecf0f1;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    background-image: linear-gradient(315deg, #f9f9f9 0%, #e6e6e6 74%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  .logo svg {
+    width: 60px;
+    height: 60px;
+  }
+  
+  h1 {
+    color: var(--dark-color);
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .btn-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  #connectButton {
+    background-color: var(--dark-color);
+    grid-column: span 2;
+  }
+  
+  #connectButton:hover {
+    background-color: #2c3e50;
+  }
+  
+  #withdrawButton {
+    background-color: var(--danger-color);
+  }
+  
+  #withdrawButton:hover {
+    background-color: #c0392b;
+  }
+  
+  #balanceButton {
+    background-color: var(--secondary-color);
+  }
+  
+  #balanceButton:hover {
+    background-color: #1a6ea0;
+  }
+  
+  .fund-form {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-color);
+    text-align: left;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: var(--transition);
+  }
+  
+  input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+  
+  #fundButton {
+    background-color: var(--accent-color);
+    width: 100%;
+  }
+  
+  #fundButton:hover {
+    background-color: #27ae60;
+  }
+  
+  .status {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--light-color);
+    display: none;
+  }
+  
+  .status.active {
+    display: block;
+  }
+  
+  .loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 10px;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #999;
+  }
