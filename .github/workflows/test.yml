@@ -22,26 +22,20 @@ jobs:
 
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
-
-      - name: Update Foundry
-        run: |
-          foundryup
+        with:
+          version: nightly  # Ensures latest version is installed
 
       - name: Show Forge version
-        run: |
-          forge --version
+        run: forge --version
 
       - name: Run Forge fmt
-        run: |
-          forge fmt
+        run: forge fmt
         id: fmt
 
       - name: Run Forge build
-        run: |
-          forge build --sizes
+        run: forge build --sizes
         id: build
 
       - name: Run Forge tests
-        run: |
-          forge test -vvv || (echo "Tests failed!" && exit 1)
+        run: forge test -vvv || (echo "Tests failed!" && exit 1)
         id: test
